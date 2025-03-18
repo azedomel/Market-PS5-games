@@ -1,0 +1,69 @@
+[
+    {
+        "id": 1,
+        "Produto": "Produto 1",
+        "imagem": "../assets/imagens/Fortnite.webp",
+        "preco": 119.90
+    },
+    {
+        "id": 2,
+        "Produto": "Produto 2",
+        "imagem": "../assets/imagens/GodOfWar.webp",
+        "preco": 299.90
+    },
+    {
+        "id": 3,
+        "Produto": "Produto 3",
+        "imagem": "../assets/imagens/GranTurismo.webp",
+        "preco": 99.90
+    },
+    {
+        "id": 4,
+        "Produto": "Produto 4",
+        "imagem": "../assets/imagens/horizon.webp",
+        "preco": 229.90
+    },
+    {
+        "id": 5,
+        "Produto": "Produto 5",
+        "imagem": "../assets/imagens/ResidentEvil.webp",
+        "preco": 459.90
+        
+    },
+    {
+        "id": 6,
+        "Produto": "Produto 6",
+        "imagem": "../assets/imagens/SpiderMan.webp",
+        "preco": 500.00,
+        "descricao":"Spider-Man é uma empolgante aventura de ação em mundo aberto, onde você assume o papel do icônico herói de Nova York, Peter Parker, em sua luta contra vilões e suas próprias batalhas pessoais. Campanha Principal — Siga Peter Parker enquanto ele enfrenta ameaças como o misterioso Mr. Negative, o clássico Duende Verde e outros vilões, enquanto lida com sua vida pessoal e a responsabilidade de ser o Homem-Aranha."
+    },
+    {
+        "id": 7,
+        "Produto": "Produto 7",
+        "imagem": "../assets/imagens/TheLasOfUs.webp",
+        "preco": 599.99,
+        "descricao" :"The Last of Us é uma emocionante jornada de ação e sobrevivência em um mundo pós-apocalíptico, onde cada escolha conta e a humanidade está à beira da extinção.  Campanha Principal — Siga Joel e Ellie em sua luta pela sobrevivência enquanto atravessam um Estados Unidos devastado por uma infecção mortal. Com emoções à flor da pele, eles enfrentam monstros, bandidos e a luta pela esperança."
+    },
+    {
+        "id": 8,
+        "Produto": "Produto 8",
+        "imagem": "../assets/imagens/Uncharted.webp",
+        "preco": 399.90,
+        "descricao":"Uncharted é uma série de ação e aventura épica que combina exploração, quebra-cabeças e tiroteios em um mundo repleto de mistérios e tesouros escondidos.  Campanha Principal — Acompanhe Nathan Drake, um aventureiro carismático, em sua busca por artefatos históricos enquanto enfrenta inimigos mortais e desvenda segredos antigos."
+    },
+    {
+        "id": 9,
+        "Produto": "Produto 9",
+        "imagem": "../assets/imagens/WatchDogs.jpg",
+        "preco": 799.90,
+        "descricao": "Watch Dogs é um jogo de ação e aventura em mundo aberto que mergulha você em um universo de hackers e conspirações tecnológicas.  Campanha Principal — Viva a jornada intensa de Aiden Pearce, um hacker habilidoso em busca de vingança, usando tecnologia para manipular a cidade de Chicago."
+    },
+    {
+        "id": 10,
+        "Produto": "Produto 10",
+        "imagem": "../assets/imagens/Warzone.jpg",
+        "preco": 499.90,
+        "descricao":"Call of Duty: Warzone é um intenso battle royale com três modos principais: Battle Royale — Sobreviva enquanto o mapa se fecha com gás mortal. Resurgence — Renasça se seus aliados permanecerem vivos.  Plunder — Acumule dinheiro eliminando inimigos e coletando saques."
+    }
+
+]

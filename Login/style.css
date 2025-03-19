@@ -12,46 +12,51 @@
 
 body{
     height: 100vh;
+    width: auto;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url(../Assets/imagens/loginbackground.png);
+    background-image: url(/assets/imagens/loginbackground.png);
     background-size: cover;
     background-repeat: no-repeat;
     color: var(--branco);
-    
 }
 
 #login{
     display: flex;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
+    gap: 20px;
+    
+
 }
-.image {
-    min-height: auto;
-    width: 100%;
+/* .image {
+    background-color: antiquewhite;
     padding: 10px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center; 
     align-items: center;
-    flex-direction: row;
-  
-}
+    flex-direction: column; 
+    gap: 2vh;
+} */
 .container{
-    height: 100%;
-    background-color: rgba(189, 200, 255, 0.111);
+    background-color: rgba(56, 60, 82, 0.219);
     border: none;
     font-size: 15px;
     padding: 20px;
     border-radius: 10px;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Alinha os elementos verticalmente dentro do formulário */
     justify-content: center;
     align-items: center;
     text-align: center;
     gap: 2vh;
     position: relative;
-    padding-top: 80px;
+    padding-top: 30px;
+    width: 300px;   
+    height: 400px;
 }
 
 .container:hover{
@@ -68,10 +73,21 @@ input, button{
     width: 100%;
 }
 
-button{
+#btn{
+    box-shadow: 0 0 5px rgba(7, 68, 68, 0.548), 0 0 25px rgba(0, 255, 255, 0.37);
     transition: all 200ms ease-in-out;
 }
 
+#btn:hover{
+    color: var(--fundo);
+    background-color: var(--branco);
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.329), 0 0 25px rgba(0, 255, 255, 0.466), 0 0 50px rgba(0, 255, 255, 0.363), 0 0 100px rgba(0, 255, 255, 0.493), 0 0 200px rgba(0, 255, 255, 0.651);
+}
+
+button{
+    transition: all 200ms ease-in-out;
+}
 button:hover{
     color: var(--fundo);
     background-color: var(--branco);
@@ -104,7 +120,7 @@ button:hover{
     position: absolute;
     bottom: 10px;
     border-radius: 999px;
-    width: 50%;
+    width: 40%;
     transition: all 200ms ease-in-out;
 }
 
@@ -123,12 +139,19 @@ background-color: var(--branco);
 border: 2px solid var(--fundo)
 }
 
+
 @media (width < 559px){
-    .container{
-        padding: 10px;
-        margin: 10px;
+    #login {
+        flex-direction: column; /* Mudando o layout para coluna (imagem abaixo do formulário) */
+        align-items: center; /* Alinha os itens centralizados */
+    }
+
+    .container {
+        width: 70%; /* Torna o formulário mais estreito em telas menores */
+        padding: 30px;
+        margin: 20px;
         background-size: cover;
-        font-size: 10px;
+        font-size: 15px;
     }
 
     .key{
@@ -138,13 +161,55 @@ border: 2px solid var(--fundo)
         display: none;
         justify-content: center;
         text-align: center;
-        width: 90%;
-        border-radius: 40px;
-        color: var(--branco);
+        width: 70%;
+        
+        color: var(--fundo);
     }
 
     .error-div:hover{
         display: flex;
     }
+   #btn-error{
+        width: 100px;
+        font-size: 10px;
+    }
 
+}
+
+@media (width < 380px){
+
+    .error-div{
+        display: none;
+        justify-content: center;
+        text-align: center;
+        min-width: 50%;
+        height: auto;
+        margin: 10px;
+        font-size: 15px;
+        border-radius: 10px;
+        color: var(--fundo);
+        border-radius: 20px;
+    }
+    #btn-error{
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        height: 20px;
+        width: 70px;
+        font-size: 10px;
+    }
+}
+
+@media (width < 300px){
+    .container{
+        width: 90%;
+        padding: 10px;
+        font-size: 10px;
+        gap: 1vh;
+    }
+
+    .error-div{
+        font-size: 10px;
+    }
 }

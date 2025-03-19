@@ -1,143 +1,137 @@
-$(document).ready(function(){
-    //recupera o carrinho do localstorage
+$(document).ready(function() {
+    // Recupera o carrinho do localStorage
     const carrinho = JSON.parse(localStorage.getItem("Carrinho")) || [];
 
-    //elemento onde a lista sera exibida
+    // Elemento onde a lista será exibida
     const listElement = $("#lista");
-    //elemento para o total
+    // Elemento para o total
     const totalElement = $("#total");
 
-    //funcao para exibir o carrinho
-    function exibirCarrinho(){
-        //limpa o conteudo atual da lista
+    // Função para exibir o carrinho
+    function exibirCarrinho() {
+        // Limpa o conteúdo atual da lista
         listElement.empty();
 
-        //variavel para acumular o preco total
+        // Variável para acumular o preço total
         let totalPreco = 0;
 
-        //itera sobre os itens do carrinho
-        $.each(carrinho, function(index, item){
-            //cria um elemento de lista pára cada item
+        // Itera sobre os itens do carrinho
+        $.each(carrinho, function(index, item) {
+            // Cria um elemento de lista para cada item
             const listItem = $("<li>").text(
                 `${item.descricao} - Preço: $${item.preco}`
             );
 
-            //cria um botao de remoção do item
+            // Cria um botão de remoção do item
             const removeButton = $("<button>")
                 .text("❌")
                 .css("margin-left", "10px")
-                .click(function(){
-                    removerItemDoCarrinho(index)
+                .click(function() {
+                    removerItemDoCarrinho(index);
                 });
 
-            //criando os filhos e pais
-            listItem.append(removeButton)
-            listElement.append(listItem)
-            //incrementa o valor total
-            totalPreco += item.preco
+            // Adiciona o botão de remoção ao item da lista
+            listItem.append(removeButton);
+            listElement.append(listItem);
+
+            // Incrementa o valor total
+            totalPreco += item.preco;
         });
-        //imprimi o total em valor dos items
-        totalElement.text(`Total: $${totalPreco}`)
+
+        // Exibe o total em valor dos itens
+        totalElement.text(`Total: $${totalPreco}`);
     }
 
-    function removerItemDoCarrinho(index){
+    // Função para remover um item do carrinho
+    function removerItemDoCarrinho(index) {
         carrinho.splice(index, 1);
-        localStorage.setItem("Carrinho", JSON.stringify(carrinho))
+        localStorage.setItem("Carrinho", JSON.stringify(carrinho));
         exibirCarrinho();
     }
 
+    // Exibe o carrinho ao carregar a página
     exibirCarrinho();
 });
 
-function gerarDocumentoWord() {
+function gerarNumeroPedido() {
+    // Gera um número de pedido fictício (exemplo: 20231025-12345)
+    const data = new Date();
+    const ano = data.getFullYear();
+    const mes = String(data.getMonth() + 1).padStart(2, "0");
+    const dia = String(data.getDate()).padStart(2, "0");
+    const numeroAleatorio = Math.floor(Math.random() * 100000);
+    return `${ano}${mes}${dia}-${numeroAleatorio}`;
+}
+
+function gerarCodigoPix() {
+    // Gera um código PIX fictício (exemplo: 123e4567-e89b-12d3-a456-426614174000)
+    return "123e4567-e89b-12d3-a456-426614174000";
+}
+
+function enviarNotaFiscalPorEmail() {
     const listaElement = document.getElementById("lista");
     const totalElement = document.getElementById("total");
 
     // Clona a lista para evitar a modificação direta na lista original
     const listaClone = listaElement.cloneNode(true);
-    // Remove o botão da lista para ir pro Word sem ele
+    // Remove o botão da lista para ir pro e-mail sem ele
     $(listaClone).find("button").remove();
 
-    const listaHtml = listaClone.innerHTML;
-    const totalHtml = totalElement.innerHTML;
-// personalização da nota fiscal 
-    const conteudoHtml = `
-        <html>
-            <head>
-                <meta charset="UTF-8" />
-                <style>
-                    body {
-                        font-family: Arial, sans-serif;
-                        margin: 40px;
-                    }
-                    h1 {
-                        color: #333;
-                        text-align: center;
-                        font-size: 24px;
-                        margin-bottom: 20px;
-                    }
-                    table {
-                        width: 100%;
-                        border-collapse: collapse;
-                        margin-bottom: 20px;
-                    }
-                    table, th, td {
-                        border: 1px solid #ddd;
-                    }
-                    th, td {
-                        padding: 12px;
-                        text-align: left;
-                    }
-                    th {
-                        background-color: #f2f2f2;
-                        font-weight: bold;
-                    }
-                    .total {
-                        font-size: 18px;
-                        font-weight: bold;
-                        text-align: right;
-                        margin-top: 20px;
-                    }
-                    .footer {
-                        text-align: center;
-                        margin-top: 40px;
-                        font-size: 14px;
-                        color: #777;
-                    }
-                </style>
-            </head>
-            <body>
-                <h1>Nota Fiscal</h1>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Descrição</th>
-                            <th>Preço</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        ${$(listaClone).find("li").map(function() {
-                            const text = $(this).text().split(" - Preço: $");
-                            return `<tr>
-                                        <td>${text[0]}</td>
-                                        <td>$${text[1]}</td>
-                                    </tr>`;
-                        }).get().join("")}
-                    </tbody>
-                </table>
-                <div class="total">${totalHtml}</div>
-                <div class="footer">
-                    Obrigado por sua compra! Volte sempre.
-                </div>
-            </body>
-        </html>
-    `;
+    // Obtém a data e hora atual
+    const dataAtual = new Date().toLocaleDateString();
+    const horaAtual = new Date().toLocaleTimeString();
 
-    const blob = new Blob([conteudoHtml], { type: "application/msword" });
-    const link = document.createElement("a");
-    link.href = URL.createObjectURL(blob);
-    link.download = "nota_fiscal.doc";
-    link.click();
+    // Gera um número de pedido e um código PIX fictício
+    const numeroPedido = gerarNumeroPedido();
+    const codigoPix = gerarCodigoPix();
 
+    // Conteúdo da nota fiscal em texto simples
+    let conteudoTexto = `========================================\n`;
+    conteudoTexto += `           NOTA FISCAL ELETRÔNICA           \n`;
+    conteudoTexto += `========================================\n\n`;
+    conteudoTexto += `Número do Pedido: ${numeroPedido}\n`;
+    conteudoTexto += `Data: ${dataAtual}\n`;
+    conteudoTexto += `Hora: ${horaAtual}\n\n`;
+    conteudoTexto += `Dados da Loja:\n`;
+    conteudoTexto += `Nome: Loja de Jogos PS5\n`;
+    conteudoTexto += `CNPJ: 12.345.678/0001-99\n`;
+    conteudoTexto += `Endereço: Rua dos Jogos, 123 - São Paulo/SP\n\n`;
+    conteudoTexto += `Itens do Pedido:\n`;
+
+    $(listaClone).find("li").each(function() {
+        const text = $(this).text().split(" - Preço: $");
+        const descricao = text[0];
+        const preco = parseFloat(text[1]);
+        const quantidade = 1; // Aqui você pode adicionar a lógica para quantidade, se necessário
+        const subtotal = preco * quantidade;
+        conteudoTexto += `- ${descricao}\n`;
+        conteudoTexto += `  Preço Unitário: $${preco.toFixed(2)}\n`;
+        conteudoTexto += `  Quantidade: ${quantidade}\n`;
+        conteudoTexto += `  Subtotal: $${subtotal.toFixed(2)}\n\n`;
+    });
+
+    conteudoTexto += `========================================\n`;
+    conteudoTexto += `Total do Pedido: ${totalElement.textContent}\n\n`;
+    conteudoTexto += `Instruções de Pagamento:\n`;
+    conteudoTexto += `- Pagamento via PIX\n`;
+    conteudoTexto += `- Código PIX: ${codigoPix}\n`;
+    conteudoTexto += `- Validade: 24 horas\n\n`;
+    conteudoTexto += `Obrigado por sua compra! Volte sempre.\n`;
+    conteudoTexto += `========================================\n`;
+
+    // Configura o e-mail
+    const email = "lojagamesps5@gmail.com"; // Substitua pelo e-mail do destinatário
+    const subject = `Nota Fiscal - Pedido ${numeroPedido}`;
+    const body = encodeURIComponent(conteudoTexto);
+
+    // Abre o cliente de e-mail padrão do usuário
+    window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+
+    // Exibe a mensagem de sucesso
     document.getElementById("pedido").style.display = "block";
+}
+
+// Função para fechar a mensagem de sucesso
+function successClose() {
+    document.getElementById("pedido").style.display = "none";
 }

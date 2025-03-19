@@ -3,14 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- link para o css -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <!-- link para o js -->
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
     <script src="script.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- fonte poppins -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>Login</title>
 </head>
 <body>
-    
+    <section id="login">
+    <div class="image">
+            <img src="../Assets/imagens/Fortnite.webp" alt="foto de login">
+    </div>
+        <div class="container">
+            <h1>Digite seu login para <br>entrar no Market:</h1>
+            <input type="text" placeholder="Insira seu nome" id="nome">
+            <div style="position: relative; width: 100%;"10,0,>
+                <input type="password" placeholder="Insira sua senha" id="senha">
+                <span onclick="showPassword()" class="key">🔑</span>
+            </div>
+            <button onclick="login()">Entrar</button>
+        </div>
+    </section>
+
+    <div class="error-div" id="error-modal">
+        <h3>Credenciais incorretas!!</h3>
+        <button onclick="fecharError()">Fechar</button>
+    </div>
 </body>
 </html>

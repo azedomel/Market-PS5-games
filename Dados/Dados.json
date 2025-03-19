@@ -1,14 +1,14 @@
 [
     {
         "id": 1,
-        "Produto": "Produto 1",
+        "Produto": "Fortnite",
         "imagem": "../assets/imagens/Fortnite.webp",
         "preco": 119.90,
         "descricao":"Fortnite é um jogo de battle royale dinâmico e colorido, onde até 100 jogadores competem para ser o último sobrevivente em uma ilha repleta de ação, construção e diversão.  Battle Royale — Salte de um ônibus de batalha e enfrente outros jogadores enquanto tenta sobreviver em um mapa que encolhe, forçando todos a se enfrentarem. Colete armas, recursos e construa fortificações enquanto luta para ser o último em pé."
     },
     {
         "id": 2,
-        "Produto": "Produto 2",
+        "Produto": "God of Wars",
         "imagem": "../assets/imagens/GodOfWar.webp",
         "preco": 299.90,
         "descricao":"God of War é uma poderosa mistura de ação, mitologia e emoção, onde você embarca em uma jornada épica ao lado de Kratos, o Deus da Guerra, em uma terra repleta de deuses, monstros e mitos. Campanha Principal — Acompanhe Kratos e seu filho Atreus enquanto enfrentam criaturas mitológicas e deuses nórdicos, buscando cumprir o último desejo de Faye, a mãe de Atreus, enquanto descobrem segredos de sua linhagem e do próprio destino."
@@ -44,7 +44,7 @@
     },
     {
         "id": 7,
-        "Produto": "The Las Of Us",
+        "Produto": "The Last Of Us",
         "imagem": "../assets/imagens/TheLasOfUs.webp",
         "preco": 599.99,
         "descricao" :"The Last of Us é uma emocionante jornada de ação e sobrevivência em um mundo pós-apocalíptico, onde cada escolha conta e a humanidade está à beira da extinção.  Campanha Principal — Siga Joel e Ellie em sua luta pela sobrevivência enquanto atravessam um Estados Unidos devastado por uma infecção mortal. Com emoções à flor da pele, eles enfrentam monstros, bandidos e a luta pela esperança."

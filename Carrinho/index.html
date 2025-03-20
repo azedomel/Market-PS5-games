@@ -1,22 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Carrinho</title>
     <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
     <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <a href="../Loja/index.html">Adicionar Mais Jogos No Carrinho</a>
-    <h1>Carrinho</h1>
-    <div id="lista"></div>
-    <h2 id="total"></h2>
-    <button onclick="enviarNotaFiscalPorEmail()">Finalizar a compra</button>
-    <p id="pedido">
-        Pedido gerado com sucesso Direcionando A Nota Fiscal No Seu Email
-        <button id="sc" onclick="successClose()">❌</button>
-    </p>
+    <!-- Botão "Voltar ao Menu De Jogos" -->
+    <button id="voltar-menu" onclick="window.location.href='../Loja/index.html'">Voltar ao Menu De Jogos</button>
+
+    <!-- Conteúdo principal do carrinho -->
+    <div id="conteudo-carrinho">
+        <h1>Carrinho</h1>
+
+        <!-- Lista de itens do carrinho -->
+        <div id="lista"></div>
+
+        <!-- Total do carrinho -->
+        <h2 id="total">Total: $0</h2>
+
+        <!-- Botão "Finalizar a compra" -->
+        <button id="finalizar-compra" onclick="gerarDocumentoWord()">Finalizar a compra</button>
+    </div>
+
+    <!-- Mensagem de sucesso (inicialmente escondida) -->
+    <div id="pedido">
+        <p>Pedido Gerado Com Sucesso. Direcionando A Nota Fiscal No Arquivo Word. Verifique Na Sua Pasta de Download Para Ter Acesso A Nota Fiscal.</p>
+        <button id="fechar-mensagem" onclick="successClose()">❌</button>
+    </div>
 </body>
 </html>

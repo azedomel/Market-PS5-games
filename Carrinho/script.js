@@ -94,8 +94,7 @@ function enviarNotaFiscalPorEmail() {
     conteudoTexto += `Hora: ${horaAtual}\n\n`;
     conteudoTexto += `Dados da Loja:\n`;
     conteudoTexto += `Nome: Loja de Jogos PS5\n`;
-    conteudoTexto += `CNPJ: 12.345.678/0001-99\n`;
-    conteudoTexto += `Endereço: Rua dos Jogos, 123 - São Paulo/SP\n\n`;
+    conteudoTexto += `CNPJ: 12.345.678/0001-99\n\n`;
     conteudoTexto += `Itens do Pedido:\n`;
 
     $(listaClone).find("li").each(function() {
@@ -114,8 +113,20 @@ function enviarNotaFiscalPorEmail() {
     conteudoTexto += `Total do Pedido: ${totalElement.textContent}\n\n`;
     conteudoTexto += `Instruções de Pagamento:\n`;
     conteudoTexto += `- Pagamento via PIX\n`;
-    conteudoTexto += `- Código PIX: ${codigoPix}\n`;
-    conteudoTexto += `- Validade: 24 horas\n\n`;
+    conteudoTexto += `  Código PIX: ${codigoPix}\n`;
+    conteudoTexto += `  Validade: 24 horas\n\n`;
+    conteudoTexto += `- Pagamento via Cartão de Crédito\n`;
+    conteudoTexto += `  Número do Cartão: **** **** **** 1234\n`;
+    conteudoTexto += `  Validade: 12/2025\n`;
+    conteudoTexto += `  Código de Segurança: 123\n\n`;
+    conteudoTexto += `- Pagamento via Boleto Bancário\n`;
+    conteudoTexto += `  Código de Barras: 1234567890123456789012345678901234567890\n`;
+    conteudoTexto += `  Vencimento: 30/11/2023\n\n`;
+    conteudoTexto += `- Pagamento via Transferência Bancária\n`;
+    conteudoTexto += `  Banco: 001 - Banco do Brasil\n`;
+    conteudoTexto += `  Agência: 1234\n`;
+    conteudoTexto += `  Conta: 123456-7\n`;
+    conteudoTexto += `  Favorecido: Loja de Jogos PS5\n\n`;
     conteudoTexto += `Obrigado por sua compra! Volte sempre.\n`;
     conteudoTexto += `========================================\n`;
 

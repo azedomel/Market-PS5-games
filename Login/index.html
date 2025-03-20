@@ -9,28 +9,56 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
     <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <!-- fonte poppins -->
      <link rel="preconnect" href="https://fonts.googleapis.com">
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
      <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>Login</title>
 </head>
+<header>
+    oi
+  </header>
 <body>
-    <section id="login">
+        <!-- <div class="navbar">
+            <img class="logo" src="/assets/imagens/logoPS5.webp" alt="logo" width="150px" height="auto">
+                    <a href="#">Contatos</a>
+                    <a href="https://www.playstation.com/pt-br/ps5/" target="_blank">Compre um PS5</a>
+            
+                    <div class="dropdown">
+                        <button>compre um ps5
+                            <i class="fa fa-caret-down"></i>
+                            <div class="dropdown-content">
+                                <a href="#">Link 1</a>
+                                <a href="#">Link 2</a>
+                                <a href="#">Link 3</a>
+                              </div>
+                    </div>
+                    </button>
+            <div class="dropdown">
+              <button class="dropbtn">Mais opções 
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+              </div>
+            </div> 
+          </div> -->
     
+          
+    <section id="login">
         <div class="container">
-            <h1>Digite seu login para <br>entrar no Market:</h1>
-            <input type="text" placeholder="Insira seu nome" id="nome">
+            <h1>Login Market</h1>
+            <input type="text" placeholder="nome" id="nome" style="border: none">
             <div style="position: relative; width: 100%;"10,0,>
-                <input type="password" placeholder="Insira sua senha" id="senha">
+                <input type="password" placeholder="senha" id="senha" style="border: none">
                 <span onclick="showPassword()" class="key">🔑</span>
             </div>
-            <button id="btn" onclick="login()">Entrar</button>
+            <button id="btn" onclick="login()">Entrar ></button>
         </div>
-    
-        <!-- <div class="image">
-            <img src="../Assets/imagens/Fortnite.webp" alt="foto de login" width="50%" height="auto">
-    </div> -->
     </section>
 
     <div class="error-div" id="error-modal">

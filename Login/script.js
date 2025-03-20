@@ -23,6 +23,13 @@ function login(){
         }
     }
 
+    //funcao para ativar o enter como opcao de entrada
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+          document.getElementById(login());
+        }
+      });
+
     function fecharError(){
     document.getElementById("nome").style.border = "2px solid pink"
     document.getElementById("senha").style.border = "2px solid pink"

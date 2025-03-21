@@ -59,21 +59,24 @@ button {
 button:hover {
     background-color: #333; /* Escurece o botão ao passar o mouse */
 }
-
 /* Estilo para a mensagem de sucesso */
 #pedido {
     display: none; /* Inicialmente oculta */
     position: fixed; /* Fixa a mensagem na tela */
-    bottom: 20px; /* Distância do fundo */
+    bottom: 10%; /* Posiciona um pouco acima do fundo */
     left: 50%; /* Centraliza horizontalmente */
     transform: translateX(-50%); /* Ajusta o centro exato */
-    padding: 20px;
+    padding: 4px 30px 4px 12px; /* Padding menor (topo, direita, fundo, esquerda) */
     background-color: green; /* Cor de fundo */
     color: white; /* Cor do texto */
-    font-size: 1.4rem;
-    border-radius: 10px; /* Borda arredondada */
+    font-size: 1rem; /* Mantém o tamanho da fonte */
+    border-radius: 6px; /* Borda arredondada */
     text-align: center;
     z-index: 1000; /* Garante que a mensagem fique acima de outros elementos */
+    white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+    max-width: 90%; /* Limita a largura máxima */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    line-height: 1.5; /* Ajusta a altura da linha */
 }
 
 /* Estilo para o botão de fechar a mensagem */
@@ -82,12 +85,18 @@ button:hover {
     color: black;
     border: none;
     border-radius: 50%;
-    width: 25px;
-    height: 25px;
+    width: 18px; /* Tamanho menor */
+    height: 18px; /* Tamanho menor */
     cursor: pointer;
     position: absolute;
-    top: 5px;
-    right: 5px;
+    top: 50%; /* Centraliza verticalmente */
+    right: 6px; /* Distância da direita */
+    transform: translateY(-50%); /* Ajusta o centro vertical */
+    font-size: 0.8rem; /* Tamanho da fonte menor */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1; /* Remove espaçamento extra */
 }
 
 #sc:hover {

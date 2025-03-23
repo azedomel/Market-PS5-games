@@ -1,6 +1,6 @@
 :root{
     --branco: rgb(239, 247, 255);
-    --fundo: #0a1864;  
+    --azulEscuro: #0a1864;  
 }
 
 *{
@@ -10,34 +10,28 @@
     font-family: "Poppins", sans-serif;
 }
 
-/* .navbar {
-    overflow: hidden;
-    background-color: #333;
-  }
-  
-  .navbar a {
-    float: left;
-    font-size: 16px;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
   
   .dropdown {
-    float: left;
     overflow: auto;
   }
-  
+
+/*   
+  .cascata{
+    display: flex;
+    justify-content: center;
+    height: auto;
+    
+    
+    padding: 5px;
+    background-color: #0a1864;
+    font-size: 20px;
+  } */
   .dropdown .dropbtn {
     font-size: 16px;  
-    border: none;
     outline: none;
     color: white;
     padding: 14px 16px;
-    background-color: inherit;
-    font-family: inherit;
-    margin: 0;
+    margin: 10px;
   }
   
   .navbar a:hover, .dropdown:hover .dropbtn {
@@ -55,7 +49,7 @@
   
   .dropdown-content a {
     float: none;
-    color: black;
+    color: rgb(255, 255, 255);
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -68,8 +62,10 @@
   
   .dropdown:hover .dropdown-content {
     display: block;
-  } */
+  } 
   
+
+
   header{
     position: fixed;
     top: 0;
@@ -78,7 +74,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--fundo);
+    background-color: var(--azulEscuro);
     color: var(--branco);
   }
 
@@ -89,7 +85,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url(/assets/imagens/loginbackground.png);
+    background-image: url(/assets/imagens/background2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     color: var(--branco);
@@ -104,13 +100,13 @@ body{
 }
 
 .container{
-    background-color: rgba(26, 31, 58, 0.185);
+    background-color: rgba(26, 31, 58, 0.291);
     border: none;
-    font-size: 20px;
+    font-size: 23px;
     padding: 20px;
     border-radius: 90px 0px 90px 0px;
     display: flex;
-    flex-direction: column; /* Alinha os elementos verticalmente dentro do formulário */
+    flex-direction: column;
     justify-content: center;
     border: 1px solid rgba(35, 33, 65, 0.233);
     text-align: center;
@@ -130,7 +126,7 @@ h1{
  
 }
 .container:hover{
-    box-shadow: 1px 8px 80px 12px rgba(53,79,156,0.97);
+    box-shadow: 1px 8px 80px 12px rgba(6, 28, 96, 0.97);
     transform: scale(1.01);
 }
 input, #btn, #btn-error{
@@ -171,16 +167,16 @@ input:hover{
     margin: 2px;
     transition: all 200ms ease-in-out;
     width: 100px;
-    background-color: var(--fundo);
-    border: 2px solid var(--fundo);
+    background-color: var(--azulEscuro);
+    border: 2px solid var(--azulEscuro);
 }
 #btn-error:hover{
-    color: var(--fundo);
+    color: var(--azulEscuro);
     background-color: var(--branco);
     cursor: pointer;
     width: 100px;
 background-color: var(--branco);
-border: 2px solid var(--fundo)
+border: 2px solid var(--azulEscuro)
 }
 .key{
     font-size: 17px;
@@ -205,7 +201,7 @@ border: 2px solid var(--fundo)
     gap: 1vw;
     background: rgb(63,94,251);
     background: radial-gradient(circle, rgb(44, 78, 251) 0%, rgba(68,41,203,1) 100%);
-    color: var(--fundo);
+    color: var(--azulEscuro);
     position: absolute;
     bottom: 10px;
     border-radius: 999px;
@@ -217,23 +213,23 @@ border: 2px solid var(--fundo)
     transform: scale(1.01);
 }
 
-
+/* Responsividade */
 @media (width < 639px){
     body{
+        background-image: url(/Assets/imagens/loginbackground.png);
         background-size: cover;
         background-repeat: no-repeat;
     }
 
     #login {
-        flex-direction: column; /* Mudando o layout para coluna (imagem abaixo do formulário) */
-        align-items: center; /* Alinha os itens centralizados */
+        flex-direction: column; 
+        align-items: center; 
     }
-
     .container {
-        width: 90%; /* Torna o formulário mais estreito em telas menores */
+        width: 90%; 
         padding: 30px;
         margin: 20px;
-        font-size: 15px;
+        font-size: 18px;
         border-radius: 90px 0px 90px 0px;
         background-color: rgba(2, 5, 15, 0.568);
         border: 1px solid rgba(35, 33, 65, 0.233);
@@ -248,7 +244,7 @@ border: 2px solid var(--fundo)
         justify-content: center;
         text-align: center;
         width: 80%;
-        color: var(--fundo);
+        color: var(--azulEscuro);
     }
 
     .error-div:hover{
@@ -280,7 +276,7 @@ border: 2px solid var(--fundo)
         margin: 10px;
         font-size: 15px;
         border-radius: 10px;
-        color: var(--fundo);
+        color: var(--azulEscuro);
         border-radius: 20px;
     }
     #btn-error{
@@ -295,8 +291,11 @@ border: 2px solid var(--fundo)
 }
 
 @media (width < 300px){
+    header{
+        width: 100%;
+    }
     .container{
-        width: 90%;
+        width: 70%;
         padding: 10px;
         font-size: 15px;
         gap: 1vh;
@@ -310,5 +309,16 @@ border: 2px solid var(--fundo)
     #btn{
         width: 70%;
         margin-left: 15%;
+        border-radius: 15px;
+    }
+}
+
+@media (width < 146px){
+    header{
+        display: flex;
+    }
+    .container{
+        margin: 1px;
+        font-size: 10px;
     }
 }

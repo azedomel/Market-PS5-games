@@ -54,6 +54,16 @@ $(document).ready(function () {
 });
 
 function gerarDocumentoWord() {
+    const mensagem = document.getElementById('pedido');
+    mensagem.style.display = 'block';
+
+    setTimeout(() => {
+        mensagem.style.display = 'none';
+    }, 10000);
+
+    console.log('Finalizando a compra e gerando o documento Word...');
+    
+
     const listaElement = document.getElementById("lista");
     const totalElement = document.getElementById("total");
 

@@ -12,7 +12,7 @@ next.onclick = function(){
     if(itemActive >= countItem){
         itemActive = 0;
     }
-    showSlider();
+    showSlider(); 
 }
 //event prev click
 prev.onclick = function(){

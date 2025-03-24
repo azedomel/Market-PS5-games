@@ -10,61 +10,84 @@
     font-family: "Poppins", sans-serif;
 }
 
-  
-  .dropdown {
-    overflow: auto;
+  .logo {
+    transition: transform 0.3s ease;
+    padding: 10px;
+    border-radius: 999px;
   }
 
-/*   
-  .cascata{
+  .logo:hover {
+    transform: scale(1.05);
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .cascata {
     display: flex;
+    align-items: center;
     justify-content: center;
-    height: auto;
-    
-    
-    padding: 5px;
-    background-color: #0a1864;
-    font-size: 20px;
-  } */
-  .dropdown .dropbtn {
-    font-size: 16px;  
-    outline: none;
+    padding: 12px 24px;
+    background-color: transparent;
     color: white;
-    padding: 14px 16px;
-    margin: 10px;
+    font-size: 18px;
+    margin: 2px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
   }
-  
-  .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: red;
+
+  .cascata:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
-  
+
+  .cascata i {
+    margin-left: 8px;
+  }
+
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #a11717;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    right: 0;
+    margin-right: 2px;
+    background-color: #2a3a8c;
+    min-width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    margin-top: 209px;
   }
-  
+
   .dropdown-content a {
-    float: none;
-    color: rgb(255, 255, 255);
-    padding: 12px 16px;
+    font-size: 15px;
+    color: white;
+    padding: 22px 16px;
     text-decoration: none;
     display: block;
-    text-align: left;
+    transition: background-color 0.2s ease;
   }
-  
+
   .dropdown-content a:hover {
-    background-color: #ddd;
+    background-color: #3a4a9c;
   }
-  
+
   .dropdown:hover .dropdown-content {
     display: block;
-  } 
-  
+    animation: fadeIn 0.3s;
+  }
 
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
 
   header{
     position: fixed;
@@ -119,6 +142,7 @@ body{
 }
 
 h1{
+    letter-spacing: 1px;
     height: 70px;
     width: auto;
     display: flex;
@@ -126,7 +150,7 @@ h1{
  
 }
 .container:hover{
-    box-shadow: 1px 8px 80px 12px rgba(6, 28, 96, 0.97);
+    box-shadow: 1px 8px 80px 12px rgba(89, 134, 247, 0.479);
     transform: scale(1.01);
 }
 input, #btn, #btn-error{
@@ -201,7 +225,7 @@ border: 2px solid var(--azulEscuro)
     gap: 1vw;
     background: rgb(63,94,251);
     background: radial-gradient(circle, rgb(44, 78, 251) 0%, rgba(68,41,203,1) 100%);
-    color: var(--azulEscuro);
+    color: var(--branco);
     position: absolute;
     bottom: 10px;
     border-radius: 999px;
@@ -214,7 +238,22 @@ border: 2px solid var(--azulEscuro)
 }
 
 /* Responsividade */
+
+@media (width < 730px){
+    .dropdown-content{
+        height: 100px;
+        margin-top: 148px;
+        font-size: 15px;
+        margin-right: 2px;
+    }
+    .dropdown-content a{
+        padding: 7px 15px;
+    }
+}
 @media (width < 639px){
+    .cascata{
+        font-size: 14px;
+    }
     body{
         background-image: url(/Assets/imagens/loginbackground.png);
         background-size: cover;
@@ -244,7 +283,7 @@ border: 2px solid var(--azulEscuro)
         justify-content: center;
         text-align: center;
         width: 80%;
-        color: var(--azulEscuro);
+        color: var(--branco);
     }
 
     .error-div:hover{
@@ -259,12 +298,13 @@ border: 2px solid var(--azulEscuro)
 
 @media (width < 380px){
    
-    .contanier{
-        width: 50%;
+    .container{
+        width: 70%;
         padding: 10px;
         font-size: 15px;
         gap: 1vh;
         border-radius: 20px;
+        height: 50vh;
     }
 
     .error-div{
@@ -276,7 +316,7 @@ border: 2px solid var(--azulEscuro)
         margin: 10px;
         font-size: 15px;
         border-radius: 10px;
-        color: var(--azulEscuro);
+        color: #850606;
         border-radius: 20px;
     }
     #btn-error{
@@ -291,15 +331,52 @@ border: 2px solid var(--azulEscuro)
 }
 
 @media (width < 300px){
+    /* tirando a palavra opcoes para deixar apenas o btn */
+    .cascata span {
+        display: none;
+    }
+    .cascata {
+        padding: 12px;
+    }
+    .cascata i {
+        margin-left: 0;
+        font-size: 20px;
+    }
+    .logo{
+        display: none;
+    }
+    .dropdown{
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .dropdown-content{
+        left: 0;
+        margin-left: 2px;
+        padding: 8px;
+        width: 120px;
+        min-width: 150px; 
+    }
+    .dropdown-content a{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        font-size: 13px;
+        padding: 8px 10px;
+    }
     header{
         width: 100%;
     }
     .container{
-        width: 70%;
-        padding: 10px;
+        width: 80%;
+        padding: 5px;
         font-size: 15px;
         gap: 1vh;
         border-radius: 20px;
+        height: 45vh;
     }
 
     .error-div{

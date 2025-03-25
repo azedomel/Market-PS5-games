@@ -19,7 +19,7 @@ $(document).ready(function () {
         $.each(carrinho, function (index, item) {
             // Cria um elemento de lista para cada item
             const listItem = $("<li>").text(
-                `${item.descricao} - Preço: $${item.preco}`
+                `${item.Produto} - Preço: $${item.preco}`
             );
 
             // Cria um botão de remoção do item

@@ -1,9 +1,27 @@
+:root {
+  --fonte-principal: 'Poppins', sans-serif;
+}
+
+body {
+  font-family: var(--fonte-principal);
+  /* ... (restante do seu CSS) ... */
+}
+
+/* Garante que todos os elementos usem Poppins */
+h1, h2, h3, h4, h5, h6, p, a, button, input, #pedido, .botao-finalizar-compra {
+  font-family: var(--fonte-principal) !important;
+}
+
+
 .navbar.bg-warning {
   background-color: black !important;
   font-weight: bold;
 }
 .nav-link {
-  color: green !important; /* Define a cor do texto como branco */
+  background-color: rgb(62, 71, 196);
+  border-radius: 10px;
+  padding: .5rem 1rem;
+  color: white;
 }
 
 #voltar-menu:hover {
@@ -12,17 +30,21 @@
 
 /* Estilo para o corpo da página */
 body {
-  font-family: Arial, sans-serif; /* Fonte */
+
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
   background-color: white; /* Cor de fundo */
   color: black; /* Cor do texto */
-  margin: 0;
-  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center; /* Centraliza horizontalmente */
   justify-content: center; /* Centraliza verticalmente */
   min-height: 100vh; /* Faz o corpo ocupar toda a altura da tela */
+  margin-top: auto;
 }
+
+
+
 
 /* Estilo para o título do carrinho */
 h1 {
@@ -82,19 +104,39 @@ button:hover {
 #fechar-mensagem {
   display: none; /* Oculta o botão de fechar */
 }
+/* Classe para o botão de finalizar compra */
+.botao-finalizar-compra {
+    background-color: #4CAF50; /* Verde similar ao do nav-link */
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: block;
+    margin: 20px auto;
+    width: fit-content;
+}
+
+.botao-finalizar-compra:hover {
+    background-color: #45a049; /* Tom mais escuro para hover */
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.7); /* Brilho verde */
+}
+
+.botao-finalizar-compra:active {
+    transform: scale(0.98);
+}
 /*pegando alguns codigos de css de outros arquivos*/
 
-.nav__logo {
-  display: inline-flex;
-  align-items: center;
-  column-gap: 0.25rem;
-  font-weight: var(--font-semi-bold);
+.img-logo{
+  transition: transform 0.3s ease;
+  padding: 10px;
+  border-radius: 999px;
 }
 
-.nav__logo i {
-  font-weight: initial;
-  font-size: 1.25rem;
-}
 
 :root {
   --branco: rgb(239, 247, 255);
@@ -124,4 +166,42 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   color: var(--branco);
+}
+
+
+
+/* Garante que o botão normal desapareça em mobile */
+@media (max-width: 991.98px) {
+  .navbar-collapse .nav-link {
+      display: none !important;
+  }
+}
+
+/* Garante que o ícone do carrinho apareça apenas em mobile */
+.nav-link:not(.d-lg-none) .d-lg-none {
+  display: none !important;
+}
+
+@media(width < 230px){
+  .img-logo{
+    display: none;
+  }
+  li{
+    font-size: 13px;
+    margin: 5px;
+  }
+  button{
+    font-size: 7px;
+    margin: 5px;
+    padding: 10px 11px;
+  }
+  h1{
+    font-size: 1.5rem;
+    margin: 2px;
+  }
+  #finalizar-compra{
+    font-size: 1rem;
+    padding: 1px 2px;
+    margin: 4px;
+  }
 }

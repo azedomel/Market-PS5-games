@@ -3,13 +3,15 @@
         "id": 1,
         "Produto": "Fortnite",
         "imagem": "../assets/imagens/Fortnite.webp",
-        "preco": 119.90,
+        "imagem2": "../assets/imagens/fortniteback.jpg",
+        "preco": 19.90,
         "descricao":"Fortnite é um jogo de battle royale dinâmico e colorido, onde até 100 jogadores competem para ser o último sobrevivente em uma ilha repleta de ação, construção e diversão.  Battle Royale — Salte de um ônibus de batalha e enfrente outros jogadores enquanto tenta sobreviver em um mapa que encolhe, forçando todos a se enfrentarem. Colete armas, recursos e construa fortificações enquanto luta para ser o último em pé."
     },
     {
         "id": 2,
         "Produto": "God of Wars",
         "imagem": "../assets/imagens/GodOfWar.webp",
+        "imagem2": "../assets/imagens/gowback.jpg",
         "preco": 299.90,
         "descricao":"God of War é uma poderosa mistura de ação, mitologia e emoção, onde você embarca em uma jornada épica ao lado de Kratos, o Deus da Guerra, em uma terra repleta de deuses, monstros e mitos. Campanha Principal — Acompanhe Kratos e seu filho Atreus enquanto enfrentam criaturas mitológicas e deuses nórdicos, buscando cumprir o último desejo de Faye, a mãe de Atreus, enquanto descobrem segredos de sua linhagem e do próprio destino."
     },
@@ -17,6 +19,7 @@
         "id": 3,
         "Produto": "Gran Turismo",
         "imagem": "../assets/imagens/GranTurismo.webp",
+        "imagem2": "../assets/imagens/granturismoback.jpeg",
         "preco": 99.90,
         "descricao":"Gran Turismo é uma das mais icônicas e realistas franquias de simulação de corridas, conhecida por sua atenção aos detalhes e vasta seleção de carros e pistas.  Campanha Principal — Comece sua jornada como piloto, participando de uma série de corridas e campeonatos em busca de se tornar o melhor do mundo, adquirindo carros e aperfeiçoando suas habilidades ao longo do caminho."
     },
@@ -24,6 +27,7 @@
         "id": 4,
         "Produto": "Horizon",
         "imagem": "../assets/imagens/horizon.webp",
+        "imagem2": "../assets/imagens/horizonback.jpg",
         "preco": 229.90,
         "descricao":"Horizon Zero Dawn é uma épica aventura de ação em mundo aberto, ambientada em um futuro pós-apocalíptico, onde criaturas mecânicas dominam a terra e os humanos vivem em tribos primitivas.  Campanha Principal — Acompanhe Aloy, uma jovem caçadora e arqueóloga, enquanto ela descobre os segredos de seu passado e luta contra máquinas gigantes para salvar o mundo."
     },
@@ -31,28 +35,32 @@
         "id": 5,
         "Produto": "Resident Evil",
         "imagem": "../assets/imagens/ResidentEvil.webp",
-        "preco": 459.90,
-        "descricao":"The Last of Us é uma emocionante jornada de ação e sobrevivência em um mundo pós-apocalíptico, onde cada escolha conta e a humanidade está à beira da extinção.   Campanha Principal — Siga Joel e Ellie em sua luta pela sobrevivência enquanto atravessam um Estados Unidos devastado por uma infecção mortal. Com emoções à flor da pele, eles enfrentam monstros, bandidos e a luta pela esperança."
+        "imagem2": "../assets/imagens/residentevilback.jpg",
+        "preco": 159.90,
+        "descricao":"Em meio a uma cidade devastada por um vírus mortal, um grupo de agentes especiais enfrenta horrores além da imaginação. O que começa como uma simples investigação policial se transforma em uma luta desesperada pela sobrevivência contra zumbis famintos e criaturas mutantes criadas por experimentos sinistros. Uma experiência que redefine o terror, onde cada decisão pode ser a diferença entre a vida e a morte em um mundo que já não tem mais espaço para a humanidade."
         
     },
     {
         "id": 6,
         "Produto": "Spider Man",
         "imagem": "../assets/imagens/SpiderMan.webp",
-        "preco": 500.00,
+        "imagem2": "../assets/imagens/spidermanback.jpg",
+        "preco": 200.00,
         "descricao":"Spider-Man é uma empolgante aventura de ação em mundo aberto, onde você assume o papel do icônico herói de Nova York, Peter Parker, em sua luta contra vilões e suas próprias batalhas pessoais. Campanha Principal — Siga Peter Parker enquanto ele enfrenta ameaças como o misterioso Mr. Negative, o clássico Duende Verde e outros vilões, enquanto lida com sua vida pessoal e a responsabilidade de ser o Homem-Aranha."
     },
     {
         "id": 7,
         "Produto": "The Last Of Us",
         "imagem": "../assets/imagens/TheLasOfUs.webp",
-        "preco": 599.99,
+        "imagem2": "../assets/imagens/thelastofusback.jpg",
+        "preco": 199.99,
         "descricao" :"The Last of Us é uma emocionante jornada de ação e sobrevivência em um mundo pós-apocalíptico, onde cada escolha conta e a humanidade está à beira da extinção.  Campanha Principal — Siga Joel e Ellie em sua luta pela sobrevivência enquanto atravessam um Estados Unidos devastado por uma infecção mortal. Com emoções à flor da pele, eles enfrentam monstros, bandidos e a luta pela esperança."
     },
     {
         "id": 8,
         "Produto": "Uncharted",
         "imagem": "../assets/imagens/Uncharted.webp",
+        "imagem2": "../assets/imagens/unchartedback.jpg",
         "preco": 399.90,
         "descricao":"Uncharted é uma série de ação e aventura épica que combina exploração, quebra-cabeças e tiroteios em um mundo repleto de mistérios e tesouros escondidos.  Campanha Principal — Acompanhe Nathan Drake, um aventureiro carismático, em sua busca por artefatos históricos enquanto enfrenta inimigos mortais e desvenda segredos antigos."
     },
@@ -60,14 +68,16 @@
         "id": 9,
         "Produto": "WatchDogs",
         "imagem": "../assets/imagens/WatchDogs.jpg",
-        "preco": 799.90,
+        "imagem2": "../assets/imagens/watchdogsback.png",
+        "preco": 299.90,
         "descricao": "Watch Dogs é um jogo de ação e aventura em mundo aberto que mergulha você em um universo de hackers e conspirações tecnológicas.  Campanha Principal — Viva a jornada intensa de Aiden Pearce, um hacker habilidoso em busca de vingança, usando tecnologia para manipular a cidade de Chicago."
     },
     {
         "id": 10,
         "Produto": "Call Of Duty: Warzone",
         "imagem": "../assets/imagens/Warzone.jpg",
-        "preco": 499.90,
+        "imagem2": "../assets/imagens/warzoneback.jpg",
+        "preco": 299.90,
         "descricao":"Call of Duty: Warzone é um intenso battle royale com três modos principais: Battle Royale — Sobreviva enquanto o mapa se fecha com gás mortal. "
     }
 

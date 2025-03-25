@@ -1,4 +1,3 @@
-/* Adicione no início do seu CSS */
 :root {
   --fonte-principal: 'Poppins', sans-serif;
 }
@@ -19,8 +18,10 @@ h1, h2, h3, h4, h5, h6, p, a, button, input, #pedido, .botao-finalizar-compra {
   font-weight: bold;
 }
 .nav-link {
-  display: flex;
-  color: green !important; /* Define a cor do texto como branco */
+  background-color: rgb(62, 71, 196);
+  border-radius: 10px;
+  padding: .5rem 1rem;
+  color: white;
 }
 
 #voltar-menu:hover {
@@ -130,13 +131,6 @@ button:hover {
 }
 /*pegando alguns codigos de css de outros arquivos*/
 
-.nav__logo {
-  display: inline-flex;
-  align-items: center;
-  column-gap: 0.25rem;
-  font-weight: var(--font-semi-bold);
-}
-
 .img-logo{
   transition: transform 0.3s ease;
   padding: 10px;
@@ -174,8 +168,40 @@ body {
   color: var(--branco);
 }
 
-/* @media(width < 900px){
-  .nav-link{
-    display: flex;
+
+
+/* Garante que o botão normal desapareça em mobile */
+@media (max-width: 991.98px) {
+  .navbar-collapse .nav-link {
+      display: none !important;
   }
-} */
+}
+
+/* Garante que o ícone do carrinho apareça apenas em mobile */
+.nav-link:not(.d-lg-none) .d-lg-none {
+  display: none !important;
+}
+
+@media(width < 230px){
+  .img-logo{
+    display: none;
+  }
+  li{
+    font-size: 13px;
+    margin: 5px;
+  }
+  button{
+    font-size: 7px;
+    margin: 5px;
+    padding: 10px 11px;
+  }
+  h1{
+    font-size: 1.5rem;
+    margin: 2px;
+  }
+  #finalizar-compra{
+    font-size: 1rem;
+    padding: 1px 2px;
+    margin: 4px;
+  }
+}

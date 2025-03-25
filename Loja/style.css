@@ -664,42 +664,116 @@ header .menu li a::after {
     }
 }
 
+/* Novas media queries para telas muito pequenas */
 @media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+    
+    header .logo {
+        font-size: 1.5rem;
+    }
+    
     header .menu {
-        gap: 10px;
+        gap: 8px;
+    }
+    
+    header .menu li a {
+        font-size: 0.9rem;
+        padding: 5px 8px;
+    }
+    
+    .welcome-section {
+        margin-top: 120px;
+        padding: 20px 10px;
+    }
+    
+    .welcome-section h1 {
+        font-size: 1.8rem;
+    }
+    
+    .welcome-section p {
         font-size: 0.9rem;
     }
-
-    .welcome-section h1 {
-        font-size: 2rem;
+    
+    .slider {
+        height: 40vh;
     }
-
-    .welcome-section p {
+    
+    .arrows {
+        right: 10px;
+    }
+    
+    .arrows button {
+        width: 35px;
+        height: 35px;
         font-size: 1rem;
     }
-
-    .slider {
-        height: 50vh;
+    
+    .thumbnail {
+        bottom: 20px;
+        height: 60px;
     }
-
-    .slider .list .item .content h2 {
-        font-size: 2rem;
+    
+    .thumbnail .item {
+        width: 80px;
+        height: 60px;
     }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    .row {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+}
 
-    .slider .list .item .content p {
+/* Ajustes específicos para telas muito estreitas */
+@media (max-width: 360px) {
+    header .menu li a {
+        font-size: 0.8rem;
+        padding: 4px 6px;
+    }
+    
+    .welcome-section h1 {
+        font-size: 1.6rem;
+    }
+    
+    .card-title {
+        font-size: 1.1rem !important;
+    }
+    
+    .btn-adicionar-ao-carrinho {
+        padding: 8px 15px;
         font-size: 0.9rem;
     }
-
-    .arrows button {
-        width: 40px;
-        height: 40px;
+    .contact-section h2 {
+        font-size: 1.8rem;
     }
-
-    .thumbnail {
-        height: 80px;
+    
+    .contact-card h3, .social-card h3, .form-card h3 {
+        font-size: 1.3rem;
     }
-
-    .card-title {
-        font-size: 1.2rem !important;
+    
+    .form-group input, 
+    .form-group textarea {
+        padding: 10px 12px;
+    }
+    
+    .form-group textarea {
+        min-height: 120px;
+    }
+    
+    .social-icons {
+        justify-content: center;
     }
 }

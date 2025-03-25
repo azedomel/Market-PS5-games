@@ -183,7 +183,7 @@ function setupSlider() {
         const sliderItem = document.createElement('div');
         sliderItem.className = `item ${index === 0 ? 'active' : ''}`;
         sliderItem.innerHTML = `
-            <img src="${produto.imagem}" alt="${produto.Produto}" loading="lazy">
+            <img src="${produto.imagem2}" alt="${produto.Produto}" loading="lazy">
         `;
         sliderFragment.appendChild(sliderItem);
 

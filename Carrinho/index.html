@@ -1,33 +1,35 @@
+<!-- KAUAN - ALGUNS COMANDOS DE CSS E HTML ESTAO NO JS -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
+    <!-- CONFIGURAÇÕES BÁSICAS -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Carrinho</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>Market PS5 - Showroom - Carrinho</title>
+
+    <!-- FONTES E BIBLIOTECAS EXTERNAS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- SCRIPTS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
- <!-- Substitua o link atual por este (apenas pesos 400, 600 e 700) -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
     <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css" />
 
+    <!-- ESTILOS -->
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+    <!-- BARRA DE NAVEGAÇÃO -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-warning">
         <div class="container-fluid">
             <a class="navbar-brand" href="#"><img class="img-logo" src="../assets/imagens/logoPS5.webp" alt="Logo" width="150px" height="auto"></a>
-            
-            <!-- Botão de voltar que ficará sempre visível -->
             <a class="nav-link d-lg-none me-2" href="../Loja/index.html">🛒</a>
             
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
@@ -42,24 +44,26 @@
             </div>
         </div>
     </nav>
+            
+            
 
-    <!-- Conteúdo principal do carrinho -->
+<!-- CONTEÚDO PRINCIPAL -->
     <div id="conteudo-carrinho">
         <h1>Carrinho</h1>
 
-        <!-- Lista de itens do carrinho -->
+        <!-- LISTA DE ITENS -->
         <div id="lista"></div>
 
-        <!-- Total do carrinho -->
+        <!-- TOTAL DA COMPRA -->
         <h2 id="total">Total: $0</h2>
 
-        <!-- Botão "Finalizar a compra" -->
+         <!-- BOTÃO FINALIZAR COMPRA -->
         <button id="finalizar-compra" class="botao-finalizar-compra" onclick="gerarDocumentoWord()">Finalizar a compra</button>
+    </div>
 
-    <!-- Mensagem de sucesso (inicialmente escondida) -->
+    <!-- MENSAGEM DE CONFIRMAÇÃO -->
     <div id="pedido">
         <p>Pedido Gerado Com Sucesso. Direcionando A Nota Fiscal No Arquivo Word. Verifique Na Sua Pasta de Download Para Ter Acesso A Nota Fiscal.</p>
-    </div>
+
 </body>
 </html>
-
